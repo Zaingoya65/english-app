@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL?.replace(/\/$/, "");
 
 class ChatService {
     constructor() {
@@ -13,7 +12,7 @@ class ChatService {
 
     async sendMessage(message, options = {}) {
         try {
-            const response = await axios.post(`${API_URL}/chat`, {
+            const response = await axios.post(`${API_URL}/api/chat`, {
                 message,
                 sessionId: this.sessionId,
                 mode: options.mode || 'default',
@@ -58,7 +57,7 @@ class ChatService {
 
     async generateReport() {
         try {
-            const response = await axios.post(`${API_URL}/chat/report`, {
+            const response = await axios.post(`${API_URL}/api/chat/report`, {
                 sessionId: this.sessionId
             });
 

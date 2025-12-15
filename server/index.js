@@ -19,7 +19,7 @@ const limiter = rateLimit({
 // Middleware
 app.use(cors({
     origin: 'https://english-app-five-ashy.vercel.app', 
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'DELETE'],
     credentials: true
 }));
 app.use(express.json());
