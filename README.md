@@ -11,7 +11,7 @@ A dual-functionality chat application for English language practice with AI. Pra
 - 🎭 **Roleplay Scenarios**: Practice real-life conversations (Airport, Job Interview, Cafe, or Normal)
 - 🗣️ **Voice Selection**: Choose from different accents and voices for the AI
 - 🔊 **Text-to-Speech**: AI responses are automatically spoken
-- ⚡ **Redis Integration**: Connected for future session management scalability
+
 - 🔄 **Dual Functionality**: Switch between voice and text modes seamlessly
 - 💾 **Conversation History**: Maintains context across messages
 - 📊 **Conversation Reports**: Generate detailed PDF-like reports of your session with feedback
@@ -21,7 +21,7 @@ A dual-functionality chat application for English language practice with AI. Pra
 ### Prerequisites
 
 - Node.js (v18 or higher)
-- Redis Server (running on port 6379)
+
 - A Groq API key (for AI features)
 
 
@@ -104,7 +104,6 @@ Open your browser and go to: **http://localhost:5173**
 ### Backend
 - Node.js
 - Express.js
-- Redis (Connection established)
 - Groq Cloud API (Llama 3.3)
 - CORS & Rate Limiting
 

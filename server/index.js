@@ -3,7 +3,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import rateLimit from 'express-rate-limit';
 import chatRoutes from './routes/chat.js';
-import './config/redis.js';
 
 dotenv.config();
 
