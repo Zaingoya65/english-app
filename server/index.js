@@ -16,9 +16,21 @@ const limiter = rateLimit({
     message: 'Too many requests from this IP, please try again later.'
 });
 
+const allowedOrigins = [
+  'https://english-app-five-ashy.vercel.app',
+  'https://english-app-git-main-zain-s-projects-9867f9f1.vercel.app'
+];
+
 // Middleware
 app.use(cors({
-    origin: 'https://english-app-five-ashy.vercel.app', 
+    origin: function(origin, callback) {
+        if (!origin) return callback(null, true); // allow non-browser requests
+        if (allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     methods: ['GET', 'POST', 'DELETE'],
     credentials: true
 }));
