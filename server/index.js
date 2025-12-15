@@ -18,7 +18,7 @@ const limiter = rateLimit({
 
 // Middleware
 app.use(cors({
-    origin: 'https://shoppingdoor.pk', 
+    origin: 'https://english-app-five-ashy.vercel.app', 
     methods: ['GET', 'POST'],
     credentials: true
 }));
