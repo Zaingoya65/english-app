@@ -18,7 +18,8 @@ const limiter = rateLimit({
 
 // Middleware
 app.use(cors({
-    origin: "*",
+    origin: 'https://shoppingdoor.pk', 
+    methods: ['GET', 'POST'],
     credentials: true
 }));
 app.use(express.json());
